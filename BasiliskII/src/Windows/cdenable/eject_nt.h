@@ -28,9 +28,9 @@
 extern "C" {
 #endif
 
-BOOL EjectVolume(TCHAR cDriveLetter,BOOL reload);
+BOOL EjectVolume(wchar_t cDriveLetter,BOOL reload);
 
-HANDLE OpenVolume(TCHAR cDriveLetter);
+HANDLE OpenVolume(wchar_t cDriveLetter);
 BOOL LockVolume(HANDLE hVolume);
 BOOL DismountVolume(HANDLE hVolume);
 BOOL PreventRemovalOfVolume(HANDLE hVolume, BOOL fPrevent);

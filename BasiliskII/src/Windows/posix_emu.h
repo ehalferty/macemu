@@ -72,7 +72,7 @@ int my_close( int fd );
 long my_lseek( int fd, long, int);
 int my_read( int fd, void *, unsigned int);
 int my_write( int fd, const void *, unsigned int);
-int my_chsize( int fd, unsigned int size );
+int my_chsize( int fd, size_t size );
 int my_locking( int fd, int mode, long nbytes );
 int my_utime( const char *path, struct my_utimbuf * );
 

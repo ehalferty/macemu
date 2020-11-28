@@ -173,7 +173,7 @@ private:
 	static int acknowledge_error(HANDLE h, bool is_read);
 	bool set_timeouts(int bauds, int parity_bits, int stop_bits);
 
-	TCHAR device_name[256];
+	wchar_t device_name[256];
 	HANDLE fd;
 
 	bool io_killed;					// Flag: KillIO called, I/O threads must not call deferred tasks
@@ -195,7 +195,7 @@ private:
 	bool is_parallel;							// true if LPTx
 
 	bool is_file;									// true if FILE
-	TCHAR output_file_name[256];
+	wchar_t output_file_name[256];
 };
 
 /*

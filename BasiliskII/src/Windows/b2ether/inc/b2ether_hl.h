@@ -34,7 +34,7 @@ extern "C" {
 
 typedef struct _ADAPTER {
   HANDLE     hFile;
-  TCHAR      SymbolicLink[MAX_LINK_NAME_LENGTH];
+  wchar_t      SymbolicLink[MAX_LINK_NAME_LENGTH];
 } ADAPTER, *LPADAPTER;
 
 typedef struct _PACKET {

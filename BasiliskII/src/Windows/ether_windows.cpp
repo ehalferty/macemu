@@ -230,7 +230,7 @@ static NetProtocol *find_protocol(uint16 type)
 
 bool ether_init(void)
 {
-	TCHAR buf[256];
+	wchar_t buf[256];
 
 	// Do nothing if no Ethernet device specified
 	const char *name = PrefsFindString("ether");
@@ -1189,7 +1189,7 @@ static LPADAPTER tap_open_adapter(LPCTSTR dev_name)
 	if (fd == NULL)
 		return NULL;
 
-	TCHAR dev_path[MAX_PATH];
+	wchar_t dev_path[MAX_PATH];
 	_sntprintf(dev_path, lengthof(dev_path),
 			 TEXT("\\\\.\\Global\\%s.tap"), dev_name);
 

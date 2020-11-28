@@ -30,7 +30,7 @@
 #include <SDL_thread.h>
 
 #include <string>
-typedef std::basic_string<TCHAR> tstring;
+typedef std::basic_string<wchar_t> tstring;
 
 #include "cpu_emulation.h"
 #include "sys.h"
@@ -63,7 +63,7 @@ extern void flush_icache_range(uint8 *start, uint32 size); // from compemu_suppo
 
 
 // Constants
-const TCHAR ROM_FILE_NAME[] = TEXT("ROM");
+const wchar_t ROM_FILE_NAME[] = TEXT("ROM");
 const int SCRATCH_MEM_SIZE = 0x10000;	// Size of scratch memory area
 
 
@@ -216,7 +216,7 @@ int main(int argc, char **argv)
 	RAMBaseHost = NULL;
 	ROMBaseHost = NULL;
 	srand(unsigned(time(NULL)));
-	tzset();
+	_tzset();
 
 	// Print some info
 	printf(GetString(STR_ABOUT_TEXT1), VERSION_MAJOR, VERSION_MINOR);
@@ -364,7 +364,8 @@ int main(int argc, char **argv)
 	const char* rom_path = PrefsFindString("rom");
 
 	// Load Mac ROM
-	HANDLE rom_fh = CreateFile((rom_path != NULL) ? rom_path : ROM_FILE_NAME,
+	// TODO: Store ROM location in registry
+	HANDLE rom_fh = CreateFile(TEXT("ROM"),
 							   GENERIC_READ,
 							   FILE_SHARE_READ, NULL,
 							   OPEN_EXISTING,

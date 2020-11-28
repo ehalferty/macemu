@@ -24,7 +24,7 @@
 #include <stdlib.h>
 
 #include <string>
-typedef std::basic_string<TCHAR> tstring;
+typedef std::basic_string<wchar_t> tstring;
 
 #include "prefs.h"
 
@@ -58,7 +58,7 @@ prefs_desc platform_prefs_items[] = {
 
 
 // Prefs file name and path
-const TCHAR PREFS_FILE_NAME[] = TEXT("BasiliskII_prefs");
+const wchar_t PREFS_FILE_NAME[] = TEXT("BasiliskII_prefs");
 tstring UserPrefsPath;
 static tstring prefs_path;
 

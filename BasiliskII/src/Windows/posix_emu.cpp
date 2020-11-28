@@ -118,8 +118,8 @@ static LPCTSTR desktop_name = TEXT("Virtual Desktop");
 static const char *custom_icon_name = "Icon\r";
 #define my_computer GetString(STR_EXTFS_VOLUME_NAME)
 
-static TCHAR lb1[MAX_PATH_LENGTH];
-static TCHAR lb2[MAX_PATH_LENGTH];
+static wchar_t lb1[MAX_PATH_LENGTH];
+static wchar_t lb2[MAX_PATH_LENGTH];
 
 #define MRP(path) translate(path,lb1)
 #define MRP2(path) translate(path,lb2)
@@ -127,8 +127,8 @@ static TCHAR lb2[MAX_PATH_LENGTH];
 #define DISABLE_ERRORS UINT prevmode = SetErrorMode(SEM_NOOPENFILEERRORBOX|SEM_FAILCRITICALERRORS)
 #define RESTORE_ERRORS SetErrorMode(prevmode);
 
-static TCHAR host_drive_list[512];
-static TCHAR virtual_root[248]; // Not _MAX_PATH
+static wchar_t host_drive_list[512];
+static wchar_t virtual_root[248]; // Not _MAX_PATH
 
 const uint8 my_comp_icon[2670] = {
 	0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x09, 0xD8, 0x00, 0x00, 0x08, 0xD8, 0x00, 0x00, 0x00, 0x96,
@@ -305,7 +305,7 @@ static bool use_streams[ 'Z'-'A'+1 ];
 static bool is_ntfs_volume(LPCTSTR rootdir)
 {
 	bool ret = false;
-	TCHAR tst_file[_MAX_PATH], tst_stream[_MAX_PATH];
+	wchar_t tst_file[_MAX_PATH], tst_stream[_MAX_PATH];
 	_sntprintf( tst_file, lengthof(tst_file), TEXT("%sb2query.tmp"), rootdir );
 	_sntprintf( tst_stream, lengthof(tst_stream), TEXT("%s:AFP_AfpInfo"), tst_file );
 	if(!exists(tst_file)) {
@@ -354,9 +354,9 @@ void init_posix_emu(void)
 
 	// Set up drive list.
 	size_t outinx = 0;
-	for( TCHAR letter = TEXT('A'); letter <= TEXT('Z'); letter++ ) {
+	for(wchar_t letter = TEXT('A'); letter <= TEXT('Z'); letter++ ) {
 		if(extdrives && !strchr(extdrives,letter)) continue;
-		TCHAR rootdir[20];
+		wchar_t rootdir[20];
 		_sntprintf( rootdir, lengthof(rootdir), TEXT("%c:\\"), letter );
 		use_streams[ letter - 'A' ] = false;
 		switch(GetDriveType(rootdir)) {
@@ -377,7 +377,7 @@ void init_posix_emu(void)
 	// Set up virtual desktop root.
 	// TODO: this should be customizable.
 	GetModuleFileName( NULL, virtual_root, lengthof(virtual_root) );
-	TCHAR *p = _tcsrchr( virtual_root, TEXT('\\') );
+	wchar_t *p = _tcsrchr( virtual_root, TEXT('\\') );
 	if(p) {
 		_tcscpy( ++p, desktop_name );
 	} else {
@@ -394,7 +394,7 @@ void init_posix_emu(void)
 			my_close(fd);
 			struct my_stat custom_icon_stat;
 			int stat_result = my_stat( custom_icon_name, &custom_icon_stat );
-			fd = open_rfork( custom_icon_name, O_RDWR|O_CREAT );
+			fd = open_rfork( custom_icon_name, _O_RDWR | _O_CREAT );
 			if(fd >= 0) {
 				my_write( fd, my_comp_icon, sizeof(my_comp_icon) );
 				my_close(fd);
@@ -469,17 +469,17 @@ static void charset_mac2host( LPTSTR s )
 				break;
 		}
 		if(convert) {
-			TCHAR sml[10];
+			wchar_t sml[10];
 			_sntprintf( sml, lengthof(sml), TEXT("%%%02X"), s[i] );
-			memmove( &s[i+2], &s[i], (_tcslen(&s[i])+1) * sizeof(TCHAR) );
-			memmove( &s[i], sml, 3 * sizeof(TCHAR) );
+			memmove( &s[i+2], &s[i], (_tcslen(&s[i])+1) * sizeof(wchar_t) );
+			memmove( &s[i], sml, 3 * sizeof(wchar_t) );
 		}
 	}
 	D(bug(TEXT("charset_mac2host = %s\n"), s));
 }
 
 static void make_mask(
-	TCHAR *mask,
+	wchar_t *mask,
 	LPCTSTR dir,
 	LPCTSTR a1,
 	LPCTSTR a2
@@ -495,10 +495,10 @@ static void make_mask(
 }
 
 // !!UNC
-static LPTSTR translate( LPCTSTR path, TCHAR *buffer )
+static LPTSTR translate( LPCTSTR path, wchar_t *buffer )
 {
-	TCHAR *l = host_drive_list;
-	const TCHAR *p = path;
+	wchar_t *l = host_drive_list;
+	const wchar_t *p = path;
 
 	while(*l) {
 		if(_totupper(p[1]) == _totupper(*l)) break;
@@ -572,7 +572,7 @@ static int myRemoveDirectory( LPCTSTR source )
 	HANDLE fh;
 	WIN32_FIND_DATA FindFileData;
 	int ok, result = 1;
-	TCHAR mask[_MAX_PATH];
+	wchar_t mask[_MAX_PATH];
 
 	D(bug(TEXT("removing folder %s\n"), source));
 
@@ -607,7 +607,7 @@ static int myRemoveDirectory( LPCTSTR source )
 
 static void make_folders( LPCTSTR path )
 {
-	TCHAR local_path[_MAX_PATH], *p;
+	wchar_t local_path[_MAX_PATH], *p;
 	_tcscpy( local_path, path );
 	p = _tcsrchr( local_path, TEXT('\\') );
 	if(p) {
@@ -666,7 +666,7 @@ static int folder_copy( LPCTSTR folder_src, LPCTSTR folder_dst )
 	HANDLE fh;
 	WIN32_FIND_DATA FindFileData;
 	int ok, result = 0;
-	TCHAR mask[_MAX_PATH];
+	wchar_t mask[_MAX_PATH];
 
 	D(bug(TEXT("copying folder %s -> \n"), folder_src, folder_dst));
 
@@ -684,7 +684,7 @@ static int folder_copy( LPCTSTR folder_src, LPCTSTR folder_dst )
 	while(ok) {
 		make_mask( mask, folder_src, FindFileData.cFileName, 0 );
 		int isdir = (FindFileData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) != 0;
-		TCHAR target[_MAX_PATH];
+		wchar_t target[_MAX_PATH];
 		make_mask( target, folder_dst, FindFileData.cFileName, 0 );
 		D(bug(TEXT("copying item %s -> %s\n"), mask, target));
 		if(isdir) {
@@ -751,7 +751,7 @@ struct dirent *readdir( struct DIR *d )
 					d->FindFileData.dwFileAttributes = FILE_ATTRIBUTE_DIRECTORY;
 				} else {
 					// Out of static drive entries. Continue with other stuff.
-					TCHAR mask[MAX_PATH_LENGTH];
+					wchar_t mask[MAX_PATH_LENGTH];
 					make_mask( mask, virtual_root, TEXT("*.*"), 0 );
 					d->h = FindFirstFile( mask, &d->FindFileData );
 				}
@@ -798,7 +798,7 @@ struct DIR *opendir( const char *path )
 				d->h = INVALID_HANDLE_VALUE;
 			}
 		} else {
-			TCHAR mask[MAX_PATH_LENGTH];
+			wchar_t mask[MAX_PATH_LENGTH];
 			make_mask( mask, MRP(tpath.get()), TEXT("*.*"), 0 );
 
 			D(bug(TEXT("opendir path=%s, mask=%s\n"), tpath.get(), mask));
@@ -896,7 +896,7 @@ int my_open( const char *path, int mode, ... )
 	if(result < 0) {
 		my_errno = errno;
 	} else {
-		setmode(result, _O_BINARY);
+		_setmode(result, _O_BINARY);
 		my_errno = 0;
 	}
 	RESTORE_ERRORS;
@@ -1056,7 +1056,7 @@ int my_creat( const char *path, int mode )
 	if(result < 0) {
 		my_errno = errno;
 	} else {
-		setmode(result, _O_BINARY);
+		_setmode(result, _O_BINARY);
 		my_errno = 0;
 	}
 	D(bug(TEXT("creat(%s,%s,%d) = %d\n"), tpath.get(), p, mode,result));
@@ -1067,7 +1067,7 @@ int my_creat( const char *path, int mode )
 int my_chsize( int fd, size_t sz )
 {
 	DISABLE_ERRORS;
-	int result = chsize(fd,sz);
+	int result = _chsize(fd,sz);
 	if(result < 0) {
 		my_errno = errno;
 	} else {
@@ -1080,7 +1080,7 @@ int my_chsize( int fd, size_t sz )
 int my_close( int fd )
 {
 	DISABLE_ERRORS;
-	int result = close(fd);
+	int result = _close(fd);
 	if(result < 0) {
 		my_errno = errno;
 	} else {
@@ -1094,7 +1094,7 @@ int my_close( int fd )
 long my_lseek( int fd, long offset, int origin )
 {
 	DISABLE_ERRORS;
-	int result = lseek( fd, offset, origin );
+	int result = _lseek( fd, offset, origin );
 	if(result < 0) {
 		my_errno = errno;
 	} else {
@@ -1107,7 +1107,7 @@ long my_lseek( int fd, long offset, int origin )
 int my_read( int fd, void *buffer, unsigned int count )
 {
 	DISABLE_ERRORS;
-	int result = read( fd, buffer, count );
+	int result = _read( fd, buffer, count );
 	if(result < 0) {
 		my_errno = errno;
 	} else {
@@ -1122,7 +1122,7 @@ int my_read( int fd, void *buffer, unsigned int count )
 int my_write( int fd, const void *buffer, unsigned int count )
 {
 	DISABLE_ERRORS;
-	int result = write( fd, buffer, count );
+	int result = _write( fd, buffer, count );
 	if(result < 0) {
 		my_errno = errno;
 	} else {

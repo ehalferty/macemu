@@ -92,7 +92,7 @@ LPADAPTER PacketOpenAdapter( LPCTSTR AdapterName, int16 mode )
       return NULL;
   }
 
-	TCHAR device_name[256];
+	wchar_t device_name[256];
 	_sntprintf(lpAdapter->SymbolicLink, lengthof(lpAdapter->SymbolicLink), TEXT("\\\\.\\B2ether_%s"), AdapterName );
 	_sntprintf(device_name, lengthof(device_name), TEXT("\\Device\\B2ether_%s"), AdapterName );
 

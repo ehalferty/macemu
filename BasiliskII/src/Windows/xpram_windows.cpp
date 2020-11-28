@@ -21,7 +21,7 @@
 #include "sysdeps.h"
 
 #include <string>
-typedef std::basic_string<TCHAR> tstring;
+typedef std::basic_string<wchar_t> tstring;
 
 #include "xpram.h"
 
@@ -30,7 +30,7 @@ typedef std::basic_string<TCHAR> tstring;
 #if POWERPC_ROM
 const TCHAR XPRAM_FILE_NAME[] = TEXT("SheepShaver_nvram.dat");
 #else
-const TCHAR XPRAM_FILE_NAME[] = TEXT("BasiliskII_xpram.dat");
+const wchar_t XPRAM_FILE_NAME[] = TEXT("BasiliskII_xpram.dat");
 #endif
 static tstring xpram_path;
 
@@ -43,7 +43,7 @@ static void build_xpram_path(void)
 {
 	xpram_path.clear();
 	int pwd_len = GetCurrentDirectory(0, NULL);
-	TCHAR *pwd = new TCHAR[pwd_len];
+	wchar_t *pwd = new wchar_t[pwd_len];
 	if (GetCurrentDirectory(pwd_len, pwd) == pwd_len - 1)
 		xpram_path = tstring(pwd) + TEXT('\\');
 	delete[] pwd;

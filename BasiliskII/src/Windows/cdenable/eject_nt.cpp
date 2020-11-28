@@ -39,12 +39,12 @@ void ReportError(LPTSTR szMsg)
    // _tprintf(szErrorFormat, GetLastError(), szMsg);
 }
 
-HANDLE OpenVolume(TCHAR cDriveLetter)
+HANDLE OpenVolume(wchar_t cDriveLetter)
 {
    HANDLE hVolume;
    UINT uDriveType;
-   TCHAR szVolumeName[8];
-   TCHAR szRootName[5];
+   wchar_t szVolumeName[8];
+   wchar_t szRootName[5];
    DWORD dwAccessFlags;
 
    wsprintf(szRootName, szRootFormat, cDriveLetter);
@@ -148,7 +148,7 @@ BOOL AutoEjectVolume( HANDLE hVolume, BOOL reload )
                            NULL);
 }
 
-BOOL EjectVolume( TCHAR cDriveLetter, BOOL reload )
+BOOL EjectVolume(wchar_t cDriveLetter, BOOL reload )
 {
    HANDLE hVolume;
 

@@ -85,7 +85,7 @@ static const char *get_volume_name(void)
 	static char out_volume[256];
 	#endif
 
-	static TCHAR volume[256];
+	static wchar_t volume[256];
 	memset(volume, 0, sizeof(volume));
 
 	// Try Windows 2000 key first

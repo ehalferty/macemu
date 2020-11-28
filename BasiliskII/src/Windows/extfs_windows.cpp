@@ -131,13 +131,13 @@ static int open_helper(const char *path, const char *add, int flag)
 	switch (flag & (_O_RDONLY | _O_WRONLY | _O_RDWR)) {
 	case _O_WRONLY:
 	case _O_RDWR:
-		flag |= O_CREAT;
+		flag |= _O_CREAT;
 		break;
 	}
 
 	int fd = open(helper_path, flag, 0666);
 	if (fd < 0) {
-		if (/*errno == ENOENT &&*/ (flag & O_CREAT)) {
+		if (/*errno == ENOENT &&*/ (flag & _O_CREAT)) {
 			// One path component was missing, probably the helper
 			// directory. Try to create it and re-open the file.
 			int ret = create_helper_dir(path, add);
@@ -241,7 +241,7 @@ void get_finfo(const char *path, uint32 finfo, uint32 fxinfo, bool is_dir)
 	WriteMacInt32(finfo + fdLocation, (uint32)-1);
 
 	// Read Finder info file
-	int fd = open_finf(path, O_RDONLY);
+	int fd = open_finf(path, _O_RDONLY);
 	if (fd >= 0) {
 		ssize_t actual = read(fd, Mac2HostAddr(finfo), SIZEOF_FInfo);
 		if (fxinfo)
@@ -278,7 +278,7 @@ void set_finfo(const char *path, uint32 finfo, uint32 fxinfo, bool is_dir)
 	}
 
 	// Open Finder info file
-	int fd = open_finf(path, O_RDWR);
+	int fd = open_finf(path, _O_RDWR);
 	if (fd < 0)
 		return;
 
@@ -297,12 +297,12 @@ void set_finfo(const char *path, uint32 finfo, uint32 fxinfo, bool is_dir)
 uint32 get_rfork_size(const char *path)
 {
 	// Open resource file
-	int fd = open_rsrc(path, O_RDONLY);
+	int fd = open_rsrc(path, _O_RDONLY);
 	if (fd < 0)
 		return 0;
 
 	// Get size
-	off_t size = lseek(fd, 0, SEEK_END);
+	_off_t size = lseek(fd, 0, SEEK_END);
 	
 	// Close file and return size
 	close(fd);
@@ -363,12 +363,12 @@ bool extfs_remove(const char *path)
 			helper_path[0] = 0;
 			strncpy(helper_path, path, MAX_PATH_LENGTH-1);
 			add_path_component(helper_path, ".finf");
-			rmdir(helper_path);
+			_rmdir(helper_path);
 			helper_path[0] = 0;
 			strncpy(helper_path, path, MAX_PATH_LENGTH-1);
 			add_path_component(helper_path, ".rsrc");
-			rmdir(helper_path);
-			return rmdir(path) == 0;
+			_rmdir(helper_path);
+			return _rmdir(path) == 0;
 		} else
 			return false;
 	}

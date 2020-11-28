@@ -26,9 +26,9 @@
 #include <memory>
 #include <string>
 
-BOOL exists( const TCHAR *path );
-int32 get_file_size( const TCHAR *path );
-BOOL create_file( const TCHAR *path, DWORD size );
+BOOL exists( const wchar_t *path );
+int32 get_file_size( const wchar_t *path );
+BOOL create_file( const wchar_t *path, DWORD size );
 bool check_drivers(void);
 
 // Thread wrappers
@@ -47,11 +47,11 @@ class mutex_t {
 };
 
 // Network control panel helpers
-extern const TCHAR *ether_name_to_guid(const TCHAR *name);
-extern const TCHAR *ether_guid_to_name(const TCHAR *guid);
+extern const wchar_t *ether_name_to_guid(const wchar_t *name);
+extern const wchar_t *ether_guid_to_name(const wchar_t *guid);
 
 // Get TAP-Win32 devices (caller free()s returned buffer)
-extern const TCHAR *ether_tap_devices(void);
+extern const wchar_t *ether_tap_devices(void);
 
 // Wide string versions of commonly used functions
 extern void ErrorAlert(const wchar_t *text);

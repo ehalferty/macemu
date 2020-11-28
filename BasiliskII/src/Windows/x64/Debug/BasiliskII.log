@@ -1,5 +1,5 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1850,5): warning : The referenced project '..\..\..\external\SDL\VisualC\SDLmain\SDLmain.vcxproj' does not exist.
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1850,5): warning : The referenced project '..\..\..\external\SDL\VisualC\SDL\SDL.vcxproj' does not exist.
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1889,5): warning : The referenced project '..\..\..\external\SDL\VisualC\SDLmain\SDLmain.vcxproj' does not exist.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1889,5): warning : The referenced project '..\..\..\external\SDL\VisualC\SDL\SDL.vcxproj' does not exist.
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v150\Platforms\x64\PlatformToolsets\v141_xp\Toolset.targets(39,5): warning MSB8051: Support for targeting Windows XP is deprecated and will not be present in future releases of Visual Studio. Please see https://go.microsoft.com/fwlink/?linkid=2023588 for more information.
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v150\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (build68k.vcxproj, gencomp.vcxproj, gencpu.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   Generating CPU emulation sources...
@@ -141,10 +141,6 @@ C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\slirp.h(44): warni
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\errno.h(91): note: see previous definition of 'ECONNREFUSED'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(101): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(171): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before '('
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2059: syntax error: ')'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before ';'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2091: function returns function
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(229): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\tcp.h(81): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\udp.h(57): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
@@ -166,10 +162,6 @@ C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\slirp.h(44): warni
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\errno.h(91): note: see previous definition of 'ECONNREFUSED'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(101): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(171): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before '('
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2059: syntax error: ')'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before ';'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2091: function returns function
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(229): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\tcp.h(81): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\udp.h(57): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
@@ -191,10 +183,6 @@ C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\slirp.h(44): warni
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\errno.h(91): note: see previous definition of 'ECONNREFUSED'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(101): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(171): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before '('
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2059: syntax error: ')'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before ';'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2091: function returns function
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(229): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\tcp.h(81): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\udp.h(57): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
@@ -217,10 +205,6 @@ C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\slirp.h(44): warni
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\errno.h(91): note: see previous definition of 'ECONNREFUSED'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(101): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(171): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before '('
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2059: syntax error: ')'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before ';'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2091: function returns function
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(229): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\tcp.h(81): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\udp.h(57): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
@@ -243,10 +227,6 @@ C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\slirp.h(44): warni
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\errno.h(91): note: see previous definition of 'ECONNREFUSED'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(101): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(171): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before '('
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2059: syntax error: ')'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before ';'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2091: function returns function
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(229): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\tcp.h(81): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\udp.h(57): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
@@ -272,10 +252,6 @@ C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\slirp.h(44): warni
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\errno.h(91): note: see previous definition of 'ECONNREFUSED'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(101): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(171): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before '('
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2059: syntax error: ')'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before ';'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2091: function returns function
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(229): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\tcp.h(81): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\udp.h(57): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
@@ -303,10 +279,6 @@ C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\slirp.h(44): warni
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\errno.h(91): note: see previous definition of 'ECONNREFUSED'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(101): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(171): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before '('
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2059: syntax error: ')'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before ';'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2091: function returns function
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(229): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\tcp.h(81): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\udp.h(57): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
@@ -329,10 +301,6 @@ C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\slirp.h(44): warni
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\errno.h(91): note: see previous definition of 'ECONNREFUSED'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(101): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(171): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before '('
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2059: syntax error: ')'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before ';'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2091: function returns function
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(229): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\tcp.h(81): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\udp.h(57): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
@@ -358,10 +326,6 @@ C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\slirp.h(44): warni
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\errno.h(91): note: see previous definition of 'ECONNREFUSED'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(101): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(171): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before '('
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2059: syntax error: ')'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before ';'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2091: function returns function
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(229): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\tcp.h(81): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\udp.h(57): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
@@ -386,10 +350,6 @@ C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\slirp.h(44): warni
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\errno.h(91): note: see previous definition of 'ECONNREFUSED'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(101): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(171): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before '('
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2059: syntax error: ')'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before ';'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2091: function returns function
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(229): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\tcp.h(81): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\udp.h(57): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
@@ -418,10 +378,6 @@ C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\slirp.h(44): warni
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\errno.h(91): note: see previous definition of 'ECONNREFUSED'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(101): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(171): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before '('
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2059: syntax error: ')'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before ';'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2091: function returns function
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(229): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\tcp.h(81): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\udp.h(57): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
@@ -442,10 +398,6 @@ C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\slirp.h(44): warni
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\errno.h(91): note: see previous definition of 'ECONNREFUSED'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(101): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(171): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before '('
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2059: syntax error: ')'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before ';'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2091: function returns function
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(229): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\tcp.h(81): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\udp.h(57): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
@@ -497,10 +449,6 @@ C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\slirp.h(44): warni
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\errno.h(91): note: see previous definition of 'ECONNREFUSED'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(101): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(171): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before '('
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2059: syntax error: ')'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before ';'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2091: function returns function
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(229): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\tcp.h(81): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\udp.h(57): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
@@ -532,10 +480,6 @@ C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\slirp.h(44): warni
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\errno.h(91): note: see previous definition of 'ECONNREFUSED'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(101): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(171): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before '('
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2059: syntax error: ')'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before ';'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2091: function returns function
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(229): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\tcp.h(81): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\udp.h(57): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
@@ -563,10 +507,6 @@ C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\slirp.h(44): warni
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\errno.h(91): note: see previous definition of 'ECONNREFUSED'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(101): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(171): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before '('
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2059: syntax error: ')'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before ';'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2091: function returns function
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(229): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\tcp.h(81): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\udp.h(57): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
@@ -605,10 +545,6 @@ C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\slirp.h(44): warni
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\errno.h(91): note: see previous definition of 'ECONNREFUSED'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(101): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(171): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before '('
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2059: syntax error: ')'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before ';'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2091: function returns function
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(229): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\tcp.h(81): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\udp.h(57): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
@@ -629,10 +565,6 @@ C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\slirp.h(44): warni
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\errno.h(91): note: see previous definition of 'ECONNREFUSED'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(101): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(171): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before '('
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2059: syntax error: ')'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before ';'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2091: function returns function
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(229): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\tcp.h(81): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\udp.h(57): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
@@ -659,10 +591,6 @@ C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\slirp.h(44): warni
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\errno.h(91): note: see previous definition of 'ECONNREFUSED'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(101): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(171): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before '('
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2059: syntax error: ')'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2143: syntax error: missing ')' before ';'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(226): error C2091: function returns function
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\ip.h(229): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\tcp.h(81): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\udp.h(57): warning C4086: expected pragma parameter to be '1', '2', '4', '8', or '16'
@@ -676,3 +604,175 @@ C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\udp.c(277): warnin
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\udp.c(329): warning C4244: '=': conversion from 'SOCKET' to 'int', possible loss of data
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\slirp\udp.c(644): warning C4244: '=': conversion from 'SOCKET' to 'int', possible loss of data
   Generating Code...
+  basilisk_glue.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+  cpudefs.cpp
+  cpuemu.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+  cpuemu_nf.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+  cpustbl.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+  cpustbl_nf.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+  memory.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+  newcpu.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+  readcpu.cpp
+  Generating Code...
+  fpu_ieee.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+  packet32.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+  cache.cpp
+  eject_nt.cpp
+  ntcd.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\cdenable\ntcd.cpp(208): warning C4311: 'type cast': pointer truncation from 'HANDLE' to 'DWORD'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\cdenable\ntcd.cpp(208): warning C4302: 'type cast': truncation from 'HANDLE' to 'DWORD'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\cdenable\ntcd.cpp(211): warning C4311: 'type cast': pointer truncation from 'char *' to 'DWORD'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\cdenable\ntcd.cpp(211): warning C4302: 'type cast': truncation from 'char *' to 'DWORD'
+  Generating Code...
+  clip_windows.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\clip_windows.cpp(220): warning C4244: 'initializing': conversion from 'SIZE_T' to 'uint32', possible loss of data
+  ether_windows.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\ether_windows.cpp(43): warning C4005: 'min': macro redefinition
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\include\windef.h(194): note: see previous definition of 'min'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\ether_windows.cpp(1639): warning C4244: 'argument': conversion from 'ssize_t' to 'uint32', possible loss of data
+  extfs_windows.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\extfs_windows.cpp(73): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\extfs_windows.cpp(256): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\extfs_windows.cpp(258): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\extfs_windows.cpp(331): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\extfs_windows.cpp(342): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  main_windows.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\main_windows.cpp(142): warning C4311: 'type cast': pointer truncation from 'sigsegv_address_t' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\main_windows.cpp(142): warning C4302: 'type cast': truncation from 'sigsegv_address_t' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\main_windows.cpp(152): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\main_windows.cpp(152): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\main_windows.cpp(356): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\main_windows.cpp(356): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+  posix_emu.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\posix_emu.cpp(379): warning C4267: 'argument': conversion from 'size_t' to 'DWORD', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\posix_emu.cpp(432): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\posix_emu.cpp(517): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\posix_emu.cpp(710): warning C4312: 'type cast': conversion from 'unsigned int' to 'HANDLE' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\posix_emu.cpp(745): warning C4312: 'type cast': conversion from 'unsigned int' to 'HANDLE' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\posix_emu.cpp(794): warning C4312: 'type cast': conversion from 'unsigned int' to 'HANDLE' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\posix_emu.cpp(1070): warning C4267: 'argument': conversion from 'size_t' to 'long', possible loss of data
+  prefs_windows.cpp
+  serial_windows.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\serial_windows.cpp(32): warning C4005: 'min': macro redefinition
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\include\windef.h(194): note: see previous definition of 'min'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\serial_windows.cpp(98): warning C4267: 'initializing': conversion from 'size_t' to 'DWORD', possible loss of data
+  sys_windows.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\sys_windows.cpp(458): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\sys_windows.cpp(463): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\sys_windows.cpp(614): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\sys_windows.cpp(619): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\sys_windows.cpp(663): warning C4267: 'argument': conversion from 'size_t' to 'DWORD', possible loss of data
+  timer_windows.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+  user_strings_windows.cpp
+  util_windows.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\util_windows.cpp(62): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\util_windows.cpp(67): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\util_windows.cpp(74): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\util_windows.cpp(79): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\util_windows.cpp(97): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\util_windows.cpp(138): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\util_windows.cpp(259): warning C4267: 'argument': conversion from 'size_t' to 'UINT', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\util_windows.cpp(325): warning C4267: '=': conversion from 'size_t' to 'DWORD', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\util_windows.cpp(350): warning C4267: '=': conversion from 'size_t' to 'DWORD', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\util_windows.cpp(435): warning C4267: '=': conversion from 'size_t' to 'DWORD', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\util_windows.cpp(459): warning C4267: '=': conversion from 'size_t' to 'DWORD', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\util_windows.cpp(469): warning C4267: '=': conversion from 'size_t' to 'DWORD', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\util_windows.cpp(502): warning C4267: '+=': conversion from 'size_t' to 'DWORD', possible loss of data
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\util_windows.cpp(508): warning C4267: '=': conversion from 'size_t' to 'DWORD', possible loss of data
+  xpram_windows.cpp
+  Generating Code...
+  arp.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+  dump.cpp
+  dynsockets.cpp
+  ftp.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\router\ftp.cpp(96): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  icmp.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+  iphelp.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\router\iphelp.cpp(48): warning C4267: 'initializing': conversion from 'size_t' to 'uint16', possible loss of data
+  ipsocket.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+  router.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+  tcp.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\router\tcp.cpp(286): warning C4312: 'type cast': conversion from 'int' to 'HANDLE' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\router\tcp.cpp(288): warning C4312: 'type cast': conversion from 'int' to 'HANDLE' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\router\tcp.cpp(694): warning C4311: 'type cast': pointer truncation from 'HANDLE' to 'int'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\router\tcp.cpp(694): warning C4302: 'type cast': truncation from 'HANDLE' to 'int'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\router\tcp.cpp(778): warning C4311: 'type cast': pointer truncation from 'HANDLE' to 'int'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\router\tcp.cpp(778): warning C4302: 'type cast': truncation from 'HANDLE' to 'int'
+  udp.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
+  Generating Code...
+  interfaces.cpp
+  mibaccess.cpp
+  Generating Code...
+  BasiliskII.vcxproj -> C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\x64\Debug\BasiliskII.exe

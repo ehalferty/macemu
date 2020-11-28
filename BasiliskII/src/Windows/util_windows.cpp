@@ -32,7 +32,7 @@ using std::list;
 #include <string>
 using std::string;
 using std::wstring;
-typedef std::basic_string<TCHAR> tstring;
+typedef std::basic_string<wchar_t> tstring;
 
 std::unique_ptr<char[]> str(const wchar_t* s)
 {
@@ -162,7 +162,7 @@ size_t wcslcat(wchar_t* dst, const char* src, size_t size)
 	return length + wcslcpy(end, src, size - length);
 }
 
-BOOL exists( const TCHAR *path )
+BOOL exists( const wchar_t *path )
 {
 	HFILE h;
 	bool ret = false;
@@ -175,7 +175,7 @@ BOOL exists( const TCHAR *path )
 	return(ret);
 }
 
-BOOL create_file( const TCHAR *path, DWORD size )
+BOOL create_file( const wchar_t *path, DWORD size )
 {
 	HANDLE h;
 	bool ok = false;
@@ -210,7 +210,7 @@ BOOL create_file( const TCHAR *path, DWORD size )
 	return(ok);
 }
 
-int32 get_file_size( const TCHAR *path )
+int32 get_file_size( const wchar_t *path )
 {
 	HANDLE h;
 	DWORD size = 0;
@@ -255,21 +255,21 @@ void kill_thread(HANDLE thread)
 
 bool check_drivers(void)
 {
-	TCHAR path[_MAX_PATH];
+	wchar_t path[_MAX_PATH];
 	GetSystemDirectory(path, lengthof(path));
 	_tcscat(path, TEXT("\\drivers\\cdenable.sys"));
 
 	if (exists(path)) {
 		int32 size = get_file_size(path);
 		if (size != 6112) {
-			TCHAR str[256];
+			wchar_t str[256];
 			_sntprintf(str, lengthof(str), TEXT("The CD-ROM driver file \"%s\" is too old or corrupted."), path);
 			ErrorAlert(str);
 			return false;
 		}
 	}
 	else {
-		TCHAR str[256];
+		wchar_t str[256];
 		_sntprintf(str, lengthof(str), TEXT("The CD-ROM driver file \"%s\" is missing."), path);
 		//WarningAlert(str);
 
@@ -315,12 +315,12 @@ static void get_network_registry(void)
 		return;
 
 	while (true) {
-		TCHAR enum_name[256];
-		TCHAR connection_string[256];
+		wchar_t enum_name[256];
+		wchar_t connection_string[256];
 		HKEY connection_key;
-		TCHAR name_data[256];
+		wchar_t name_data[256];
 		DWORD name_type;
-		const TCHAR name_string[] = TEXT("Name");
+		const wchar_t name_string[] = TEXT("Name");
 
 		len = lengthof(enum_name);
 		status = RegEnumKeyEx(
@@ -370,7 +370,7 @@ static void get_network_registry(void)
 	RegCloseKey (network_connections_key);
 }
 
-const TCHAR *ether_name_to_guid(const TCHAR *name)
+const wchar_t *ether_name_to_guid(const wchar_t *name)
 {
 	get_network_registry();
 
@@ -382,7 +382,7 @@ const TCHAR *ether_name_to_guid(const TCHAR *name)
 	return NULL;
 }
 
-const TCHAR *ether_guid_to_name(const TCHAR *guid)
+const wchar_t *ether_guid_to_name(const wchar_t *guid)
 {
 	get_network_registry();
 
@@ -403,7 +403,7 @@ const TCHAR *ether_guid_to_name(const TCHAR *guid)
 
 const _TCHAR * tap_component_ids[] = { TEXT("tap0801"), TEXT("tap0901"), 0 };
 
-const TCHAR *ether_tap_devices(void)
+const wchar_t *ether_tap_devices(void)
 {
 	HKEY adapter_key;
 	LONG status;
@@ -423,13 +423,13 @@ const TCHAR *ether_tap_devices(void)
 	list<tstring> devices;
 
 	while (true) {
-		TCHAR enum_name[256];
-		TCHAR unit_string[256];
+		wchar_t enum_name[256];
+		wchar_t unit_string[256];
 		HKEY unit_key;
-		TCHAR component_id_string[] = TEXT("ComponentId");
-		TCHAR component_id[256];
-		TCHAR net_cfg_instance_id_string[] = TEXT("NetCfgInstanceId");
-		TCHAR net_cfg_instance_id[256];
+		wchar_t component_id_string[] = TEXT("ComponentId");
+		wchar_t component_id[256];
+		wchar_t net_cfg_instance_id_string[] = TEXT("NetCfgInstanceId");
+		wchar_t net_cfg_instance_id[256];
 		DWORD data_type;
 
 		len = lengthof(enum_name);
@@ -501,9 +501,9 @@ const TCHAR *ether_tap_devices(void)
 	for (it = devices.begin(); it != devices.end(); it++)
 		len += (*it).length() + 1;
 
-	TCHAR *names = (TCHAR *)malloc(len * sizeof(TCHAR));
+	wchar_t *names = (wchar_t*)malloc(len * sizeof(wchar_t));
 	if (names) {
-		TCHAR *p = names;
+		wchar_t *p = names;
 		for (it = devices.begin(); it != devices.end(); it++) {
 			len = (*it).length();
 			_tcscpy(p, (*it).c_str());

@@ -23,7 +23,7 @@
 #include <winioctl.h>
 
 #include <string>
-typedef std::basic_string<TCHAR> tstring;
+typedef std::basic_string<wchar_t> tstring;
 
 #include <algorithm>
 using std::min;
@@ -50,7 +50,7 @@ using std::min;
 
 // File handles are pointers to these structures
 struct file_handle {
-	TCHAR *name;		// Copy of device/file name
+	wchar_t *name;		// Copy of device/file name
 	HANDLE fh;
 	bool is_file;		// Flag: plain file or physical device?
 	bool is_floppy;		// Flag: floppy device
@@ -160,7 +160,7 @@ void mount_removable_media(int media)
 				CloseHandle(fh->fh);
 
 			// Re-open device
-			TCHAR device_name[MAX_PATH];
+			wchar_t device_name[MAX_PATH];
 			_sntprintf(device_name, lengthof(device_name), TEXT("\\\\.\\%c:"), fh->name[0]);
 			fh->fh = CreateFile(
 				device_name,
@@ -435,7 +435,7 @@ static bool is_cdrom_readable(file_handle *fh)
  *  Check if NAME represents a read-only file
  */
 
-static bool is_read_only_path(const TCHAR *name)
+static bool is_read_only_path(const wchar_t *name)
 {
 	DWORD attrib = GetFileAttributes(name);
 	return (attrib != INVALID_FILE_ATTRIBUTES && ((attrib & FILE_ATTRIBUTE_READONLY) != 0));
@@ -451,7 +451,7 @@ void *Sys_open(const char *path_name, bool read_only)
 	file_handle * fh = NULL;
 
 	// Parse path name and options
-	TCHAR name[MAX_PATH];
+	wchar_t name[MAX_PATH];
 	tcslcpy(name, path_name, lengthof(name));
 
 	// Normalize floppy / cd path
@@ -468,7 +468,7 @@ void *Sys_open(const char *path_name, bool read_only)
 
 		if (type == DRIVE_CDROM) {
 			read_only = true;
-			TCHAR device_name[MAX_PATH];
+			wchar_t device_name[MAX_PATH];
 			_sntprintf(device_name, lengthof(device_name), TEXT("\\\\.\\%c:"), name[0]);
 
 			// Open device
