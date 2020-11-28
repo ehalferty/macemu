@@ -27,6 +27,7 @@
 #include <sys/stat.h>
 
 #include "extfs.h"
+#include "windows.h"
 
 void init_posix_emu(void);
 void final_posix_emu(void);
@@ -39,7 +40,7 @@ typedef struct DIR {
 	HANDLE h;
 	WIN32_FIND_DATA FindFileData;
 	dirent de;
-	TCHAR *vname_list;
+	wchar_t *vname_list;
 } DIR;
 
 // emulated

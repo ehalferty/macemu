@@ -1,0 +1,11 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1850,5): warning : The referenced project '..\..\..\external\SDL\VisualC\SDLmain\SDLmain.vcxproj' does not exist.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1850,5): warning : The referenced project '..\..\..\external\SDL\VisualC\SDL\SDL.vcxproj' does not exist.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v150\Platforms\x64\PlatformToolsets\v141_xp\Toolset.targets(39,5): warning MSB8051: Support for targeting Windows XP is deprecated and will not be present in future releases of Visual Studio. Please see https://go.microsoft.com/fwlink/?linkid=2023588 for more information.
+  Generating CPU emulation sources...
+  The system cannot find the path specified.
+  The system cannot find the path specified.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v150\Microsoft.CppCommon.targets(255,5): error MSB3073: The command "cd ..\uae_cpu
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v150\Microsoft.CppCommon.targets(255,5): error MSB3073: "C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\Debug\gencpu"
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v150\Microsoft.CppCommon.targets(255,5): error MSB3073: "C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\Debug\gencomp"
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v150\Microsoft.CppCommon.targets(255,5): error MSB3073: 
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v150\Microsoft.CppCommon.targets(255,5): error MSB3073: :VCEnd" exited with code 3.

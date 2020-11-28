@@ -238,7 +238,7 @@ static void add_data(const char *name, prefs_type type, void *data, int size)
 	memcpy(d, data, size);
 	prefs_node *p = new prefs_node;
 	p->next = 0;
-	p->name = strdup(name);
+	p->name = _strdup(name);
 	p->type = type;
 	p->data = d;
 	if (the_prefs) {
@@ -291,7 +291,7 @@ void PrefsReplaceString(const char *name, const char *s, int index)
 	prefs_node *p = find_node(name, TYPE_STRING, index);
 	if (p) {
 		free(p->data);
-		p->data = strdup(s);
+		p->data = _strdup(s);
 	} else
 		add_data(name, TYPE_STRING, (void *)s, strlen(s) + 1);
 }

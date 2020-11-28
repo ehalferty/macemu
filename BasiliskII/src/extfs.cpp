@@ -1534,20 +1534,20 @@ static int16 fs_open(uint32 pb, uint32 dirID, uint32 vcb, bool resource_fork)
 	switch (ReadMacInt8(pb + ioPermssn)) {
 		case fsCurPerm:		// Whatever is currently allowed
 			if (write_ok)
-				flag = O_RDWR;
+				flag = _O_RDWR;
 			else
-				flag = O_RDONLY;
+				flag = _O_RDONLY;
 			break;
 		case fsRdPerm:		// Exclusive read
-			flag = O_RDONLY;
+			flag = _O_RDONLY;
 			break;
 		case fsWrPerm:		// Exclusive write
-			flag = O_WRONLY;
+			flag = _O_WRONLY;
 			break;
 		case fsRdWrPerm:	// Exclusive read/write
 		case fsRdWrShPerm:	// Shared read/write
 		default:
-			flag = O_RDWR;
+			flag = _O_RDWR;
 			break;
 	}
 
@@ -1591,7 +1591,7 @@ static int16 fs_open(uint32 pb, uint32 dirID, uint32 vcb, bool resource_fork)
 
 	// Initialize FCB, fd is stored in fcbCatPos
 	WriteMacInt32(fcb + fcbFlNm, fs_item->id);
-	WriteMacInt8(fcb + fcbFlags, ((flag == O_WRONLY || flag == O_RDWR) ? fcbWriteMask : 0) | (resource_fork ? fcbResourceMask : 0) | (write_ok ? 0 : fcbFileLockedMask));
+	WriteMacInt8(fcb + fcbFlags, ((flag == _O_WRONLY || flag == _O_RDWR) ? fcbWriteMask : 0) | (resource_fork ? fcbResourceMask : 0) | (write_ok ? 0 : fcbFileLockedMask));
 	uint32 file_size = (uint32) st.st_size;
 	WriteMacInt32(fcb + fcbEOF, file_size);
 	WriteMacInt32(fcb + fcbPLen, (file_size | (AL_BLK_SIZE - 1)) + 1);

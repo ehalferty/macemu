@@ -103,7 +103,7 @@ static void
 read_counts (void)
 {
     FILE *file;
-    unsigned long opcode, count, total;
+    unsigned long opcode = 0, count = 0, total = 0;
     char name[20];
     int nr = 0;
     memset (counts, 0, 65536 * sizeof *counts);

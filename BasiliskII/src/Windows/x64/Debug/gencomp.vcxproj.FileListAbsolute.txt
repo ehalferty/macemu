@@ -1,0 +1,2 @@
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\x64\Debug\gencomp.exe
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\x64\Debug\gencomp.pdb

@@ -1060,7 +1060,11 @@ void driver_base::init()
 	
 	// set default B/W palette
 	sdl_palette = SDL_AllocPalette(256);
-	sdl_palette->colors[1] = (SDL_Color){ .r = 0, .g = 0, .b = 0, .a = 255 };
+	sdl_palette->colors[1].r = 0;
+	sdl_palette->colors[1].g = 0;
+	sdl_palette->colors[1].b = 0;
+	sdl_palette->colors[1].a = 255;
+	//sdl_palette->colors[1] = (SDL_Color){ .r = 0, .g = 0, .b = 0, .a = 255 };
 	SDL_SetSurfacePalette(s, sdl_palette);
 }
 
@@ -2588,7 +2592,7 @@ static void update_display_static_bbox(driver_base *drv)
 	const uint32 N_PIXELS = 64;
 	const uint32 n_x_boxes = (VIDEO_MODE_X + N_PIXELS - 1) / N_PIXELS;
 	const uint32 n_y_boxes = (VIDEO_MODE_Y + N_PIXELS - 1) / N_PIXELS;
-	SDL_Rect *boxes = (SDL_Rect *)alloca(sizeof(SDL_Rect) * n_x_boxes * n_y_boxes);
+	SDL_Rect *boxes = (SDL_Rect *)_alloca(sizeof(SDL_Rect) * n_x_boxes * n_y_boxes);
 	uint32 nr_boxes = 0;
 
 	// Lock surface, if required

@@ -171,7 +171,13 @@ ip_input(m)
 		 * of this datagram.
 		 */
 		for (l = ipq.ip_link.next; l != &ipq.ip_link; l = l->next) {
-            fp = container_of(l, struct ipq, ip_link);
+
+//#define container_of(ptr, type, member) ({                      \
+//        const typeof(((type *) 0)->member) *__mptr = (ptr);     \
+//        (type *) ((char *) __mptr - offsetof(type, member));})
+			fp = (struct ipq*)((char*)l - offsetof(struct ipq, ip_link));
+
+            //fp = container_of(l, struct ipq, ip_link);
             if (ip->ip_id == fp->ipq_id &&
                     ip->ip_src.s_addr == fp->ipq_src.s_addr &&
                     ip->ip_dst.s_addr == fp->ipq_dst.s_addr &&
@@ -462,7 +468,8 @@ ip_slowtimo()
 	   return;
 
 	while (l != &ipq.ip_link) {
-		struct ipq *fp = container_of(l, struct ipq, ip_link);
+		struct ipq* fp = (struct ipq*)((char*)l - offsetof(struct ipq, ip_link));
+		//struct ipq *fp = container_of(l, struct ipq, ip_link);
 		l = l->next;
 		if (--fp->ipq_ttl == 0) {
 			ipstat.ips_fragtimeout++;
