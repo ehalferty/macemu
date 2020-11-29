@@ -284,16 +284,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="BasiliskII.ico">
-      <Filter>Resource Files</Filter>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="BasiliskII.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="ether_windows.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -588,6 +578,9 @@
     <ClInclude Include="..\uae_cpu\compiler\codegen_x86.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="SDL2.dll" />
@@ -595,5 +588,15 @@
   <ItemGroup>
     <Library Include="SDL2.lib" />
     <Library Include="SDL2main.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BasiliskII.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\..\..\Downloads\macemu-master\BasiliskII\src\Windows\BasiliskIIGUI.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

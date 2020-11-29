@@ -150,12 +150,6 @@
     <ClCompile Include="..\xpram.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="BasiliskII.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="BasiliskII.rc" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\CrossPlatform\sigsegv.h" />
     <ClInclude Include="..\CrossPlatform\video_blit.h" />
     <ClInclude Include="..\CrossPlatform\video_vosf.h" />
@@ -238,6 +232,7 @@
     <ClInclude Include="ether_windows.h" />
     <ClInclude Include="kernel_windows.h" />
     <ClInclude Include="posix_emu.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="router\arp.h" />
     <ClInclude Include="router\dump.h" />
     <ClInclude Include="router\dynsockets.h" />
@@ -269,6 +264,12 @@
   <ItemGroup>
     <Library Include="SDL2.lib" />
     <Library Include="SDL2main.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BasiliskII.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\..\..\Downloads\macemu-master\BasiliskII\src\Windows\BasiliskIIGUI.ico" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{1AAA5D96-9498-4EB5-A436-0143E2B7A0B0}</ProjectGuid>
@@ -461,6 +462,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>WS2_32.lib;IPHlpApi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <CustomBuildStep>
       <Command>cd ..\uae_cpu
@@ -477,6 +479,10 @@
     <CustomBuildStep>
       <Inputs>$(ToolsDir)gencpu.exe;$(ToolsDir)gencomp.exe</Inputs>
     </CustomBuildStep>
+    <Manifest>
+      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
+    </Manifest>
+    <ResourceCompile />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug JIT|Win32'">
     <ClCompile>

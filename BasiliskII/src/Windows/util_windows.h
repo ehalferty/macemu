@@ -122,4 +122,23 @@ size_t wcslcat(wchar_t* dst, const char* src, size_t size);
 #define tcslcat strlcat
 #endif
 
+inline HINSTANCE inst;
+inline HWND mainWnd, tbWnd, statusWnd;
+inline PAINTSTRUCT ps;
+inline HDC hdc;
+
+#define MAIN_WND_CLS_NAME L"MAIN_WND_CLS"
+#define APP_NAME "WinBasilisk"
+
+inline void RegWndCls(LPCWSTR clsNme, UINT styl, WNDPROC wndproc, HINSTANCE i, HICON ico, HCURSOR cur, HBRUSH bgr, LPCWSTR mnu, HICON icosm) {
+    WNDCLASSEXW wcex = { sizeof(WNDCLASSEX), styl, wndproc, 0, 0, i, ico, cur,  bgr, mnu, clsNme, icosm }; RegisterClassExW(&wcex);
+}
+
+int run();
+
+
+
+inline bool do_quit = false;
+
 #endif // _UTIL_WINDOWS_H
+

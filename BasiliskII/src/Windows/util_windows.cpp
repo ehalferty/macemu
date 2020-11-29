@@ -514,3 +514,5 @@ const wchar_t *ether_tap_devices(void)
 
 	return names;
 }
+
+int run();

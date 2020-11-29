@@ -49,6 +49,7 @@ typedef std::basic_string<wchar_t> tstring;
 #include "vm_alloc.h"
 #include "sigsegv.h"
 #include "util_windows.h"
+#include "resource.h"
 
 #if USE_JIT
 extern void flush_icache_range(uint8 *start, uint32 size); // from compemu_support.cpp
@@ -207,10 +208,105 @@ static void usage(const char *prg_name)
 	exit(0);
 }
 
-int main(int argc, char **argv)
-{
+INT_PTR CALLBACK About(HWND dlg, UINT msg, WPARAM wp, LPARAM lp) {
+	if (msg == WM_INITDIALOG) {
+		return (INT_PTR)TRUE;
+	} else if (msg == WM_COMMAND) {
+		if (LOWORD(wp) == IDOK || LOWORD(wp) == IDCANCEL) {
+			EndDialog(dlg, LOWORD(wp));
+			return (INT_PTR)TRUE;
+		}
+	}
+	return (INT_PTR)FALSE;
+}
+
+LRESULT CALLBACK MainWndProc(HWND wnd, UINT msg, WPARAM wp, LPARAM lp) {
+	switch (msg) {
+	case WM_CREATE:
+		/*tbWnd = CreateWindowEx(0, TOOLBARCLASSNAME, NULL, WS_CHILD | WS_VISIBLE, 0, 0, 0, 0, wnd, NULL, GetModuleHandle(NULL), NULL);
+		SendMessage(tbWnd, TB_BUTTONSTRUCTSIZE, (WPARAM)sizeof(TBBUTTON), 0);
+		tbAddBmp.hInst = HINST_COMMCTRL;
+		tbAddBmp.nID = IDB_STD_SMALL_COLOR;
+		SendMessage(tbWnd, TB_ADDBITMAP, 0, (LPARAM)&tbAddBmp);
+		ZeroMemory(tbBtns, sizeof(tbBtns));
+		TOOLBAR_BUTTON(0, STD_FILENEW, IDM_FILE_NEW);
+		TOOLBAR_BUTTON(1, STD_FILEOPEN, IDM_FILE_OPEN);
+		SendMessage(tbWnd, TB_ADDBUTTONS, sizeof(tbBtns) / sizeof(TBBUTTON), (LPARAM)&tbBtns);
+		statusWnd = CreateWindowEx(0, STATUSCLASSNAME, NULL, WS_CHILD | WS_VISIBLE | SBARS_SIZEGRIP, 0, 0, 0, 0, wnd, NULL, GetModuleHandle(NULL), NULL);
+		SendMessage(statusWnd, SB_SETPARTS, sizeof(statusBarWidths) / sizeof(int), (LPARAM)statusBarWidths);
+		SendMessage(statusWnd, SB_SETTEXT, 0, (LPARAM)_T("Loaded"));
+		gridWnd = CreateWindowEx(WS_EX_CLIENTEDGE, GRID_WND_CLS_NAME, L"", WS_CHILD | WS_VISIBLE, 0, 0, 0, 0, wnd, NULL, GetModuleHandle(NULL), NULL);
+		camWnd = CreateWindowEx(WS_EX_CLIENTEDGE, CAM_WND_CLS_NAME, L"", WS_CHILD | WS_VISIBLE, 0, 0, 0, 0, wnd, NULL, GetModuleHandle(NULL), NULL);
+		texWnd = CreateWindowEx(WS_EX_CLIENTEDGE, TEX_WND_CLS_NAME, L"", WS_CHILD | WS_VISIBLE, 0, 0, 0, 0, wnd, NULL, GetModuleHandle(NULL), NULL);
+
+		// Init state
+		state.snapshots.emplace_back(new Snapshot());*/
+		break;
+	case WM_COMMAND:
+	{
+		switch (LOWORD(wp)) {
+		case ID_HELP_ABOUT:
+			DialogBox(inst, MAKEINTRESOURCE(IDD_DIALOG1), wnd, About);
+			break;
+		case ID_FILE_EXIT:
+			DestroyWindow(wnd);
+			break;
+		case ID_FILE_START:
+			run();
+			break;
+		default:
+			return DefWindowProc(wnd, msg, wp, lp);
+		}
+	}
+	break;
+	case WM_PAINT:
+		hdc = BeginPaint(wnd, &ps);
+		EndPaint(wnd, &ps);
+		break;
+	case WM_CLOSE:
+		DestroyWindow(wnd);
+		break;
+	case WM_DESTROY:
+		PostQuitMessage(0);
+		break;
+	default:
+		return DefWindowProc(wnd, msg, wp, lp);
+	}
+	return 0;
+}
+
+int main(int argc, char** argv) {
+	inst = GetModuleHandle(NULL);
+	RegWndCls(MAIN_WND_CLS_NAME, CS_HREDRAW | CS_VREDRAW, MainWndProc, inst, LoadIcon(inst, MAKEINTRESOURCE(IDI_ICON1)), LoadCursor(nullptr, IDC_ARROW),
+		(HBRUSH)(COLOR_WINDOW + 1), MAKEINTRESOURCEW(IDR_MENU1), LoadIcon(inst, MAKEINTRESOURCE(IDI_ICON1)));
+	mainWnd = CreateWindowW(MAIN_WND_CLS_NAME, L"Resplendent Map Editor v1.0", WS_OVERLAPPEDWINDOW | WS_CLIPCHILDREN, CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, inst, nullptr);
+	ShowWindow(mainWnd, SW_SHOWDEFAULT);
+	UpdateWindow(mainWnd);
+
+	HACCEL hAccelTable = LoadAccelerators(inst, MAKEINTRESOURCE(IDR_ACCELERATOR1));
+	MSG msg;
+	while (TRUE) {
+		if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE)) {
+			if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg)) {
+				if (msg.message == WM_QUIT) {
+					ExitProcess(0);
+				} else { TranslateMessage(&msg); DispatchMessage(&msg); }
+			}
+		} else { Sleep(1); }
+		//Render();
+	}
+
+
+	//while (!do_quit) {}
+	return 0;
+}
+
+
+int run() {
 	char str[256];
 	bool cd_boot = false;
+	int argc = 0;
+	char** argv = nullptr;
 
 	// Initialize variables
 	RAMBaseHost = NULL;
@@ -276,12 +372,6 @@ int main(int argc, char **argv)
 			usage(argv[0]);
 		}
 	}
-
-#if 0
-	// Check that drivers are installed
-	if (!check_drivers())
-		QuitEmulator();
-#endif
 
 	// Initialize SDL system
 	int sdl_flags = 0;
