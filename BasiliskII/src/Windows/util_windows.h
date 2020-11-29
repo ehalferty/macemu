@@ -126,6 +126,7 @@ inline HINSTANCE inst;
 inline HWND mainWnd, tbWnd, statusWnd;
 inline PAINTSTRUCT ps;
 inline HDC hdc;
+inline OPENFILENAME ofn;
 
 #define MAIN_WND_CLS_NAME L"MAIN_WND_CLS"
 #define APP_NAME "WinBasilisk"

@@ -2,15 +2,9 @@
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(1889,5): warning : The referenced project '..\..\..\external\SDL\VisualC\SDL\SDL.vcxproj' does not exist.
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v150\Platforms\x64\PlatformToolsets\v141_xp\Toolset.targets(39,5): warning MSB8051: Support for targeting Windows XP is deprecated and will not be present in future releases of Visual Studio. Please see https://go.microsoft.com/fwlink/?linkid=2023588 for more information.
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v150\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (build68k.vcxproj, gencomp.vcxproj, gencpu.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  main_windows.cpp
+  packet32.cpp
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\util_windows.h(129): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\util_windows.h(129): error C2146: syntax error: missing ';' before identifier 'ofn'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(129): warning C4312: 'type cast': conversion from 'uintptr' to 'uint8 *' of greater size
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
 C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\uae_cpu\memory.h(133): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\main_windows.cpp(143): warning C4311: 'type cast': pointer truncation from 'sigsegv_address_t' to 'uintptr'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\main_windows.cpp(143): warning C4302: 'type cast': truncation from 'sigsegv_address_t' to 'uintptr'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\main_windows.cpp(153): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\main_windows.cpp(153): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\main_windows.cpp(446): warning C4311: 'type cast': pointer truncation from 'uint8 *' to 'uintptr'
-C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\main_windows.cpp(446): warning C4302: 'type cast': truncation from 'uint8 *' to 'uintptr'
-LINK : warning LNK4044: unrecognized option '/FS'; ignored
-  BasiliskII.vcxproj -> C:\Users\edwar\OneDrive\Documents\macemu\BasiliskII\src\Windows\x64\Debug\BasiliskII.exe

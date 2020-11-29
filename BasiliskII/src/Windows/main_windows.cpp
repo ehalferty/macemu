@@ -50,6 +50,8 @@ typedef std::basic_string<wchar_t> tstring;
 #include "sigsegv.h"
 #include "util_windows.h"
 #include "resource.h"
+#include <windows.h>
+#include <comdlg.h>
 
 #if USE_JIT
 extern void flush_icache_range(uint8 *start, uint32 size); // from compemu_support.cpp
@@ -248,11 +250,72 @@ LRESULT CALLBACK MainWndProc(HWND wnd, UINT msg, WPARAM wp, LPARAM lp) {
 		case ID_HELP_ABOUT:
 			DialogBox(inst, MAKEINTRESOURCE(IDD_DIALOG1), wnd, About);
 			break;
-		case ID_FILE_EXIT:
-			DestroyWindow(wnd);
+		case ID_FILE_CHOOSEROMFILE:
+		{
+			auto fileName = HeapAlloc(GetProcessHeap(), 0, sizeof(wchar_t) * 1024);
+			ZeroMemory(&ofn, sizeof(ofn));
+			ofn.lStructSize = sizeof(ofn);
+			ofn.hwndOwner = wnd;
+			ofn.lpstrFile = (LPWSTR)fileName;
+			ofn.lpstrFile[0] = '\0';
+			ofn.nMaxFile = sizeof(fileName);
+			ofn.lpstrFilter = L"All\0*.*\0Quake 3 Map\0*.MAP\0";
+			ofn.nFilterIndex = 1;
+			ofn.lpstrFileTitle = NULL;
+			ofn.nMaxFileTitle = 0;
+			ofn.lpstrInitialDir = NULL;
+			ofn.Flags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST;
+			if (GetOpenFileName(&ofn) != 0) {
+				// Create a connection to the file
+				auto openedFile = CreateFile(ofn.lpstrFile, GENERIC_READ, 0, (LPSECURITY_ATTRIBUTES)NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, (HANDLE)NULL);
+				if (openedFile == INVALID_HANDLE_VALUE) {
+					MessageBox(NULL, L"Couldn't read file size!", L"Error", MB_ICONERROR);
+				} else {
+					// Get the file size.
+					LARGE_INTEGER fileSizeInBytes;
+					if (!GetFileSizeEx(openedFile, &fileSizeInBytes)) {
+						MessageBox(NULL, L"Couldn't read file size!", L"Error", MB_ICONERROR);
+					} else {
+						// Allocate memory for the file data.
+						CHAR* fileBytes = (CHAR*)HeapAlloc(GetProcessHeap(), 0, sizeof(CHAR) * fileSizeInBytes.QuadPart);
+						// Read the file.
+						DWORD bytesRead;
+						BOOL success = ReadFile(openedFile, fileBytes, fileSizeInBytes.LowPart, &bytesRead, NULL);
+						if (!success) {
+							MessageBox(NULL, L"Couldn't read file size!", L"Error", MB_ICONERROR);
+							CloseHandle(openedFile);
+							HeapFree(GetProcessHeap(), 0, fileBytes);
+						} else {
+							/*struct MapFile * mapFile = (struct MapFile*)
+								HeapAlloc(GetProcessHeap(), 0, sizeof(struct MapFile));
+							wcsncpy_s(
+								(WCHAR *)mapFile->fileName, 260,
+								(WCHAR CONST *)fileName, 260);*/
+								//mapFile->entityList = ParseMapFile(fileBytes, fileSizeInBytes.LowPart);
+								// Parse to internal format
+								/*struct EntityNode * iterator = mapFile->entityList;
+								for (; iterator->next != (struct EntityNode *)0; iterator = iterator->next) {
+									WCHAR buffer[1024];
+									wsprintf(buffer, L" %p", mapFile);
+									OutputDebugString(buffer);
+								}
+								WCHAR buffer[1024];
+								wsprintf(buffer, L"Pointer: %p", mapFile);
+								OutputDebugString(buffer);*/
+							volatile int a = 9;
+						}
+					}
+				}
+			}
+
+		}
+			//EnableMenuItem(GetSubMenu(GetMenu(mainWnd), 0), ID_FILE_START, MF_DISABLED);
 			break;
 		case ID_FILE_START:
 			run();
+			break;
+		case ID_FILE_EXIT:
+			DestroyWindow(wnd);
 			break;
 		default:
 			return DefWindowProc(wnd, msg, wp, lp);
@@ -282,6 +345,7 @@ int main(int argc, char** argv) {
 	mainWnd = CreateWindowW(MAIN_WND_CLS_NAME, L"Resplendent Map Editor v1.0", WS_OVERLAPPEDWINDOW | WS_CLIPCHILDREN, CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, inst, nullptr);
 	ShowWindow(mainWnd, SW_SHOWDEFAULT);
 	UpdateWindow(mainWnd);
+	EnableMenuItem(GetSubMenu(GetMenu(mainWnd), 0), ID_FILE_START, MF_DISABLED);
 
 	HACCEL hAccelTable = LoadAccelerators(inst, MAKEINTRESOURCE(IDR_ACCELERATOR1));
 	MSG msg;
